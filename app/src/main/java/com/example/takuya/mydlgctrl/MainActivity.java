@@ -9,12 +9,14 @@ import java.util.Collections;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<MyDataModel> myDataModels;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ArrayList<MyDataModel> myDataModels;
 
         //test data
         myDataModels = new ArrayList<MyDataModel>();
@@ -22,27 +24,27 @@ public class MainActivity extends AppCompatActivity {
         MyDataModel aaa = new MyDataModel();
         aaa.name = "aaa";
         aaa.adress = "adress 111";
-        aaa.tel = "111";
+        aaa.tel = "1";
 
         MyDataModel bbb = new MyDataModel();
         bbb.name = "bbb";
         bbb.adress = "adress 111";
-        bbb.tel = "111";
+        bbb.tel = "11";
 
         MyDataModel ccc = new MyDataModel();
         ccc.name = "ccc";
         ccc.adress = "adress 111";
-        ccc.tel = "111";
+        ccc.tel = "5";
 
         MyDataModel ddd = new MyDataModel();
-        ddd.name = "ddd";
+        ddd.name = "3";
         ddd.adress = "adress 111";
-        ddd.tel = "111";
+        ddd.tel = "2";
 
         MyDataModel eee = new MyDataModel();
         eee.name = "eee";
         eee.adress = "adress 111";
-        eee.tel = "111";
+        eee.tel = "9";
 
 
         myDataModels.add(bbb);
@@ -60,6 +62,12 @@ public class MainActivity extends AppCompatActivity {
 
         for(MyDataModel model : myDataModels){
             Log.d("test",model.name);
+        }
+
+        Collections.sort(myDataModels);
+        Log.d("test","Sorted222222.....");
+        for(MyDataModel model : myDataModels){
+            Log.d("test",model.tel);
         }
     }
 }
