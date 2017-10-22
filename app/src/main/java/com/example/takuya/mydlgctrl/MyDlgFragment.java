@@ -40,6 +40,7 @@ public class MyDlgFragment extends DialogFragment{
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String msg = position + "番目のアイテムがクリックされました";
                 Toast.makeText(getContext(), msg, Toast.LENGTH_LONG).show();
+                dismiss();
             }
         });
 
@@ -73,17 +74,18 @@ public class MyDlgFragment extends DialogFragment{
                 .setTitle("test title")
                 //.setMessage("set Messageでタイトルを設定する")
                 .setView(R.layout.mydialogfragment)
-                .setPositiveButton("はい", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        // FIRE ZE MISSILES!
-
-                    }
-                })
-                .setNegativeButton("キャンセル", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        // User cancelled the dialog
-                    }
-                });
+//                .setPositiveButton("はい", new DialogInterface.OnClickListener() {
+//                    public void onClick(DialogInterface dialog, int id) {
+//                        // FIRE ZE MISSILES!
+//
+//                    }
+//                })
+//                .setNegativeButton("キャンセル", new DialogInterface.OnClickListener() {
+//                    public void onClick(DialogInterface dialog, int id) {
+//                        // User cancelled the dialog
+//                    }
+//                })
+        ;
 
 
         // Create the AlertDialog object and return it
