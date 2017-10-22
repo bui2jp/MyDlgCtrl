@@ -3,13 +3,14 @@ package com.example.takuya.mydlgctrl;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class MainActivity extends AppCompatActivity {
-
-
+public class MainActivity extends AppCompatActivity
+        implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,4 +71,17 @@ public class MainActivity extends AppCompatActivity {
             Log.d("test",model.tel);
         }
     }
+
+
+    @Override
+    public void onClick(View view){
+        Log.d("onClick","start");
+        Toast.makeText(this,"test",Toast.LENGTH_SHORT).show();
+
+        MyDlgFragment dlg = new MyDlgFragment();
+        dlg.show(getSupportFragmentManager(),"test");
+
+        Log.d("onClick","end");
+    }
+
 }
